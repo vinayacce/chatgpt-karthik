@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  .chat-container
+    .loader
+      .content
+    .message-placeholder
+    div(class="chatbox")
+        input(id='assistant-id',type='hidden',value='asst_IQ5HvMSgd9VEiJ1kzFEGffF3',placeholder='',name='assistantId')
+        textarea(type="text", placeholder="How I can help you?", id="query", value='', name='query')
+        input(type='button',value='Ask',id="query-submit")
+  #footer
+    script(src="/javascripts/chatgpt.js" type="text/javascript")
